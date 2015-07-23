@@ -42,7 +42,7 @@ class CoffeeScript(Precompiler):
     """ A Coffescript precompiler, extending the precompiler provided by
         ligament_precompiler_template
     """
-    inline_template_string = (
+    external_template_string = (
         "<script type='text/javascript' src='%s'></script>")
 
     embed_template_string = (
@@ -50,7 +50,7 @@ class CoffeeScript(Precompiler):
 
     default_kwargs = {
          "minify": True,
-         "inline": True,
+         "embed": True,
          "source_dir": "template/js",
          "target_dir": "build/js",
          "build_targets": ["*.coffee"],
@@ -61,6 +61,8 @@ class CoffeeScript(Precompiler):
         calling_kwargs = CoffeeScript.default_kwargs.copy()
         calling_kwargs.update(**kwargs)
         Precompiler.__init__(self, **calling_kwargs)
+
+        self.compiler_name = "coffee"
 
         self.file_watch_targets = [
             os.path.join(self.input_directory, "*.coffee"),

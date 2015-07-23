@@ -17,8 +17,8 @@ with open(path.join(here, 'DESCRIPTION.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='ligament=-coffeescript',
-    version='0.0.0.devl',
+    name='ligament-coffeescript',
+    version='0.0.0.dev',
     description='A coffeescript build task for ligament',
     url='http://github.com/Adjective-Object/ligament_coffeescript',
     author='Adjective-Object',
@@ -31,11 +31,11 @@ setup(
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Build Tools',
 
-        'License :: OSI Approved :: Apache 2',
+        'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python :: 2.7'],
 
     keywords='ligament grunt build automation coffeescript',
-    install_requires=['ligament>=0.0.0.devl', 'CoffeeScript>=1.1.1', 'jsmin>=2.1.1'],
+    install_requires=['ligament>=0.0.0.dev', 'CoffeeScript>=1.1.1', 'jsmin>=2.1.1'],
 
     packages=["ligament_coffeescript"]
 )
