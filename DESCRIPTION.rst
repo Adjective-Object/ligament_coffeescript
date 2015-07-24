@@ -1,6 +1,4 @@
 Coffescript Compiler for ligament
 =================================
 
-Compiles and concatenates coffeescript, under ligament
-
-TODO write the docs
+provides a [ligament](https://pypi.python.org/pypi/ligament) interface for coffeescript
